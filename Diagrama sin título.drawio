@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-03T01:39:12.062Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="l7k0C90u-E9czCca83UN" version="20.2.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-03T01:41:52.694Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="bLOUesO-ORJNQnkS5TeO" version="20.2.8" type="github">
   <diagram id="cHPiIkGnKBZ-qwNp1Fqs" name="Página-1">
     <mxGraphModel dx="1508" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -79,8 +79,8 @@
         <mxCell id="87GCZqK9oe9EleAZIWvs-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="87GCZqK9oe9EleAZIWvs-17" target="87GCZqK9oe9EleAZIWvs-40">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="87GCZqK9oe9EleAZIWvs-53" value="Pertecece a" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="320" y="245" width="70" height="23.68" as="geometry" />
+        <mxCell id="87GCZqK9oe9EleAZIWvs-53" value="Consultar/&lt;br&gt;Gestionar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="87" y="580" width="37" height="23.68" as="geometry" />
         </mxCell>
         <mxCell id="87GCZqK9oe9EleAZIWvs-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="87GCZqK9oe9EleAZIWvs-21" target="87GCZqK9oe9EleAZIWvs-41">
           <mxGeometry relative="1" as="geometry" />
@@ -239,6 +239,12 @@
         </mxCell>
         <mxCell id="87GCZqK9oe9EleAZIWvs-109" value="Consultar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;rotation=-90;" vertex="1" parent="1">
           <mxGeometry x="-68" y="523.6757894736843" width="60" height="23.684210526315788" as="geometry" />
+        </mxCell>
+        <mxCell id="87GCZqK9oe9EleAZIWvs-110" value="" style="endArrow=classic;html=1;rounded=0;shadow=0;startArrow=oval;startFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90.38" y="547.36" as="sourcePoint" />
+            <mxPoint x="90.38" y="637.36" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
