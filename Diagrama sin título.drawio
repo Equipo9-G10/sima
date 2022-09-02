@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-09-03T01:41:52.694Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="bLOUesO-ORJNQnkS5TeO" version="20.2.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-03T01:49:54.226Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="5ige-DMxIy_UK2OkNNaX" version="20.2.8" type="github">
   <diagram id="cHPiIkGnKBZ-qwNp1Fqs" name="Página-1">
-    <mxGraphModel dx="1508" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1508" dy="483" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -139,8 +139,8 @@
         <mxCell id="87GCZqK9oe9EleAZIWvs-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;shadow=0;endArrow=openThin;endFill=0;" edge="1" parent="1" source="87GCZqK9oe9EleAZIWvs-33" target="87GCZqK9oe9EleAZIWvs-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="87GCZqK9oe9EleAZIWvs-77" value="Solicita/Rechaza" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="149" y="451.9957894736842" width="60" height="23.684210526315788" as="geometry" />
+        <mxCell id="87GCZqK9oe9EleAZIWvs-77" value="Solicita/Gestiona" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="149" y="450.9957894736842" width="60" height="23.684210526315788" as="geometry" />
         </mxCell>
         <mxCell id="87GCZqK9oe9EleAZIWvs-78" value="" style="endArrow=openThin;html=1;rounded=0;endFill=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;shadow=0;" edge="1" parent="1" source="87GCZqK9oe9EleAZIWvs-34" target="87GCZqK9oe9EleAZIWvs-37">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
