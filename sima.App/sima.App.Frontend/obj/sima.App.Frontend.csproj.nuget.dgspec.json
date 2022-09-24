@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/developer/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj": {}
+    "/home/developer/dev/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj": {}
   },
   "projects": {
-    "/home/developer/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj": {
+    "/home/developer/dev/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/developer/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj",
+        "projectUniqueName": "/home/developer/dev/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj",
         "projectName": "sima.App.Frontend",
-        "projectPath": "/home/developer/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj",
+        "projectPath": "/home/developer/dev/sima/sima.App/sima.App.Frontend/sima.App.Frontend.csproj",
         "packagesPath": "/home/developer/.nuget/packages/",
-        "outputPath": "/home/developer/sima/sima.App/sima.App.Frontend/obj/",
+        "outputPath": "/home/developer/dev/sima/sima.App/sima.App.Frontend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/developer/.nuget/NuGet/NuGet.Config"
