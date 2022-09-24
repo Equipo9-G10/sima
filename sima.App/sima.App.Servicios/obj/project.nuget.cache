@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "uesZLrK7+2Y9k59J7QxVw1lGGEIgnolOLnE7gXuk6gJkgLmFlqe13K10zlYsw9p+Wm+uQl7aoht++H5yk1sm9w==",
+  "success": true,
+  "projectFilePath": "/home/developer/dev/sima/sima.App/sima.App.Servicios/sima.App.Servicios.csproj",
+  "expectedPackageFiles": [
+    "/home/developer/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/developer/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/developer/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/developer/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/developer/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/developer/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/home/developer/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

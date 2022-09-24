@@ -1,0 +1,383 @@
+@page
+@{
+    Layout="../Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="h-full">
+        <div x-data="{ expanded: false }" class="bg-white font-poppins text-zinc-700 rounded-lg px-8 py-6 overflow-x-auto">
+            <h4 class="text-xl font-semibold text-zinc-900 uppercase">Módulo Vehículos</h4>
+            <div class="mt-8 mb-3 flex flex-col md:flex-row items-start md:items-center md:justify-between">
+                <div class="flex items-center justify-center space-x-4">
+                    <form class="relative flex items-center">
+                        <input 
+                            type="search"
+                            name="" 
+                            id="search_without_btn" 
+                            class="flex-1 py-0.5 pl-10 border-zinc-300 focus:outline-none focus:ring-0 focus:border-orange-600 rounded-md" 
+                            placeholder="Busqueda..."
+                        >
+                        <span class="absolute left-2 bg-transparent flex items-center justify-center" @@click="show = !show">
+                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"></path></svg>
+                        </span>
+                    </form>
+                    <button @@click="expanded = ! expanded"
+                    class="text-zinc-700 hover:text-orange-600 font-semibold hover:underline"
+                    >Filtro</button>
+                </div>
+                <form>
+                    <label>Ordenar por:</label>
+                    <select class="text-sm py-0.5 ml-1 border-zinc-300 focus:outline-none focus:ring-0 focus:border-orange-600 rounded-md">
+                        <option></option>
+                        <option>Placa</option>
+                        <option>Numero Documento</option>
+                    </select>
+                </form>
+            </div>
+            <div x-show="expanded" x-collapse.duration.300ms>
+                <div class="mb-2 py-4 bg-zinc-200 px-8 rounded-lg">
+                    <h5 class="underline text-zinc-700">Búsqueda por filtros</h5>
+                    <form class="py-2">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-4">
+                            <input type="text" name="id"
+                            class="flex-1 py-1 border-zinc-300 rounded focus:border-orange-600 focus:outline-none focus:ring-0" 
+                            placeholder="Placa Vehículo"
+                            >
+
+                            <input type="text" name="employee_name"
+                            class="flex-1 py-1 border-zinc-300 rounded focus:border-orange-600 focus:outline-none focus:ring-0" 
+                            placeholder="Número Documento"
+                            >
+
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-4">
+                            <input type="text" name="id"
+                            class="flex-1 py-1 border-zinc-300 rounded focus:border-orange-600 focus:outline-none focus:ring-0" 
+                            placeholder="Placa"
+                            >
+
+                            <input type="text" name="employee_email"
+                            class="flex-1 py-1 border-zinc-300 rounded focus:border-orange-600 focus:outline-none focus:ring-0" 
+                            placeholder="Número Documento"
+                            >
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-4">
+                            
+                            
+                            <div>
+                                <label class="mr-2 text-zinc-700">Desde:</label>
+                                <input 
+                                type="date" 
+                                name="from_date" 
+                                class="flex-1 py-1 border-zinc-300 mt-1 rounded focus:border-orange-600 focus:outline-none focus:ring-0" 
+                                >
+                            </div>
+
+                            <div>
+                                <label class="mr-2 text-zinc-700">Hasta:</label>
+                                <input 
+                                type="date" 
+                                name="to_date" 
+                                class="flex-1 py-1 border-zinc-300 mt-1 rounded focus:border-orange-600 focus:outline-none focus:ring-0" 
+                                >
+                            </div>
+                        </div>
+
+                        <button class="bg-orange-500 hover:bg-orange-600 rounded-lg px-8 py-1 text-white hover:shadow-xl transition duration-150 mt-8 text-sm  ">
+                            Filtrar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg px-8 py-6 custom-scrollbar mt-5 mb-12">
+            <div x-data="{menuOpen: false, registerModal: false}" class="flex">
+                <div class="absolute right-2 space-y-4">
+                    <a asp-page="./CarRegistration/Index"
+                    class="h-12 bg-orange-500 hover:bg-orange-600 text-white hover:shadow-xl px-4 py-2 mr-10 rounded-lg"
+                >
+                    Registrar Vehículo
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg py-6 overflow-x-scroll custom-scrollbar mb-12">
+                    <h4 class="text-xl text-zinc-900 font-semibold font-poppins">Lista de vehículos</h4>
+                    <table class="w-full my-8 whitespace-nowrap">
+                        <thead align="center" class=" mr-2 bg-orange-600 text-white font-bold uppercase">
+                            <td class="py-2 px-4">
+
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Placa
+                            </td>
+                                        
+                            <td class="py-2 px-4">
+                                Fabricante
+                            </td>
+                                        
+                            <td class="py-2 px-4">
+                                Línea
+                            </td>
+                                        
+                            <td class="py-2 px-4">
+                                Modelo
+                            </td>
+                                    
+                            <td class="py-2 px-4">
+                                Cilindraje CC
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Color
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Servicio
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Carrocería
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Combustible
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Capacidad Kg/Ps
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Motor ID
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Número Serie
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Número Chasís
+                            </td>
+
+                            <td class="py-2 px-4">
+                                País de Origen
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Propietario
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Id Propietario
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Fecha Registro
+                            </td>
+
+                            <td class="py-2 px-4">
+                                Gestión
+                            </td>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr align="center" class="bg-gray-100 hover:bg-primary hover:bg-opacity-20 transition duration-200">
+                                <td class="py-3 px-4">
+                                    <input type="checkbox" class="rounded focus:ring-0 checked:bg-orange-600 ml-2">
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    ABC-000
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    CHEVROLET
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    VITARA
+                                </td>
+                                
+                                <td class="py-3 px-4">
+                                    2012
+                                </td>
+                    
+                                <td class="py-3 px-4">
+                                    1.590
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    BLANCO PURO
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    PARTICULAR
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    CAMPERO
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    CABINADO
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    GASOLINA
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    5
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    G16B-723
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    BLDBSE449C001
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    Estados Unidos
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    PEPITO PEREZ
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    1234567890
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    15/09/2022
+                                </td>
+
+                                <td class="py-3 px-4 flex items-center space-x-2 mr-2">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary hover:text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                    </a>
+                                    
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </a>
+                                    
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-500 hover:text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </a>
+                                    
+                                </td>
+                            </tr>
+
+                            <tr  align="center" class="bg-gray-100 hover:bg-primary hover:bg-opacity-20 transition duration-200">
+                                <td class="py-3 px-4">
+                                    <input type="checkbox" class="rounded focus:ring-0 checked:bg-orange-600 ml-2">
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    ABC-001
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    RENAULT
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    DUSTER
+                                </td>
+                                
+                                <td class="py-3 px-4">
+                                    2018
+                                </td>
+                    
+                                <td class="py-3 px-4">
+                                    1.461
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    NEGRO
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    PARTICULAR
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    CAMIONETA
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    WAGON
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    GASOLINA
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    5
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    G188B-745
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    RNTBSE550C001
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    Francia
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    JUANITO GOMEZ
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    1234567899
+                                </td>
+
+                                <td class="py-2 px-4">
+                                    15/09/2022
+                                </td>
+
+                                <td class="py-3 px-4 flex items-center space-x-2 mr-2">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary hover:text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                    </a>
+                                    
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </a>
+                                    
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-500 hover:text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </a>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>           
+                </div>
+            </div>
+        </di>   
+    </div>
+</main>

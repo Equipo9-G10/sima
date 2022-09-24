@@ -1,0 +1,32 @@
+{
+  "name": "sima.app",
+  "version": "1.0.0",
+  "description": "librería de estilos tailwindBlazor",
+  "main": "index.js",
+  "scripts": {
+    "buildcss": " postcss sima.App.Frontend/wwwroot/css/main.css -o sima.App.Frontend/wwwroot/css/site.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalvarezy/sima.git"
+  },
+  "keywords": [
+    "sima"
+  ],
+  "author": "Jorge Alvarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jalvarezy/sima/issues"
+  },
+  "homepage": "https://github.com/jalvarezy/sima#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "tailwindcss": "^3.1.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.7"
+  }
+}

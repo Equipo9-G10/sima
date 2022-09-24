@@ -1,0 +1,333 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] | sima</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        
+        <style>[x-cloak] { display: none !important; }</style>
+
+        <script src="js/site.js"></script>
+
+        <script defer src="https://unpkg.com/@@lpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        
+    </head>
+    
+    <body>
+        <div x-data="{ menuOpen: false }" class="flex min-h-screen custom-scrollbar">
+            
+            <!-- Black Overlay -->
+            <div :class="menuOpen ? 'block' : 'hidden'" @@click="menuOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 ease-in-out transition-opacity lg:hidden">
+            </div>
+            <!-- End Black overlay -->
+
+            <!--Sidebar-->
+            <aside :class="menuOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in-out'" 
+                class="bg-white font-poppins text-base fixed z-30 inset-y-0 left-0 w-64 ease-out transition duration-300 overflow-y-auto lg:translate-x-0 lg:inset-0 custom-scrollbar shadow-md">
+                
+                <!--Logo-->
+                <div class="flex items-center justify-center h-20">
+                    <svg class="w-32 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1219.89 377.9"><defs><style>.cls-1{fill:#f97316;}.cls-2{fill:#343b44;}.cls-3{fill:#fefefe;}</style></defs><path class="cls-1" d="M24.73,217c-5.06,5-9.85,10.26-13.23,16.64-5.79,10.94-4.38,20.93,4.28,29.76,5.06,5.16,11.17,8.77,17.67,11.77C46,281,59.28,284.41,72.88,286.64a110.32,110.32,0,0,0,23,1.69c2.51-.11,4.56-.76,6-3.09a34.52,34.52,0,0,1,6.23-6.89c15-13.27,32-17,50.63-9.68,20.65,8.06,32.49,28.75,29.85,50.77-.43,3.64-.43,3.65,3.9,3.91,31.65,1.88,63.29,1.35,94.92-.48,22.1-1.28,44.16-3.33,66.31-3.57q27.18-.3,54.37.1c11.56.16,23.13.8,34.63-1,8.07-1.29,15.4-4.08,20.86-10.52,4.53-5.34,6.95-11.72,8.63-18.4a55.39,55.39,0,0,1,8.92-19.23c22.88-31.56,72.59-27,89.37,8.18,3.62,7.59,5,15.6,5.43,23.93.37,8.12,2.56,15.61,9.23,21,4.14,3.35,9.12,4.88,14.08,6.56,3.13,1.07,5.12.46,7.22-2.06,3.85-4.63,7.67-9.21,9.39-15.13,1-3.38.22-5.44-2.65-7.52a36.22,36.22,0,0,0-7.76-3.79c-4.44-1.8-9-3.39-12.66-6.63a9.34,9.34,0,0,1-3.38-4.91c.25,0,.33,0,.37,0l1.58,1c5.14,3.4,10.68,5.72,16.93,5.87,2.59.06,3.45-1.09,3-3.61a14.51,14.51,0,0,0-2.25-5.21,69.15,69.15,0,0,0-20.65-20.3,13.17,13.17,0,0,0-5.51-2.05,3.11,3.11,0,0,0-3.23,1.1,2.91,2.91,0,0,0,.17,3.2c.5.93,1.12,1.79,1.7,2.68a25.65,25.65,0,0,1,4.16,12.35l-3.06-3.78c-8.15-10-17.16-19.07-28.39-25.68s-23.1-10-36.14-8.8c-14.65,1.37-26.83,8-37.49,17.81a80.69,80.69,0,0,0-14.88,18.6,2,2,0,0,1-.41-1.65c.1-11.81,4.48-21.67,13.57-29.29,3.74-3.13,3.57-4.65-1-6.7-.25-.12-.52-.2-.78-.31a61.66,61.66,0,0,0-12.86-3.36c-17.86-3.21-35.93-4.57-54-5.86-21.59-1.55-43.22-2.53-64.85-3.34q-46.71-1.76-93.46-2.51c-28.91-.5-57.82-.76-86.73-1.1-4.6,0-9.2,0-13.8,0l-.05-.65c11.23-4.64,22.69-8.66,34.3-12.21a357.06,357.06,0,0,1,35.43-8.9A328.47,328.47,0,0,1,257.46,202a323.15,323.15,0,0,1,36.56-1c12.1.36,24.13,1.54,36.15,2.93-16.78-4.92-34-6.78-51.35-6.93a325,325,0,0,0-50.14,3.8c-25.19,3.69-50,9.43-74.69,15.35-23.76,5.7-47.38,12.07-71.61,15.62-13.83,2-27.72,3.35-41.73,2.3-4.15-.31-8.29-.82-12.08-2.74-4.06-2.07-5-5-3-9.11A28.32,28.32,0,0,1,32.31,214c8.84-8.09,18.95-14.38,29.18-20.5s20.63-11.89,31.3-17.19q8.89-4.42,17.8-8.82l.41.46c-7.11,5.19-14.29,10.29-21.31,15.61C81.19,190,73,196.74,65.85,204.7a32,32,0,0,0-6.2,9.27q-2.79,6.85,4.05,9.72a20.76,20.76,0,0,0,4,1.16c8.16,1.49,16.32.78,24.45-.16,20.47-2.37,40.55-6.85,60.57-11.59,26.8-6.35,53.62-12.56,80.94-16.34,24.82-3.43,49.68-4.8,74.63-1.54,10.78,1.41,21.48,3.35,31.68,7.19,23.32,8.79,46.55,17.84,69.83,26.73,2.42.92,4.71,2.28,7.39,2.42,30.63,1.52,61.18,4,91.54,8.53,9.33,1.39,18.67,2.81,27.89,4.8,8.88,1.91,17.8,3.64,26.53,6.2,3.09.91,6.14,2,9.27,2.66a58.91,58.91,0,0,1,7.85,2.26c3.82,1.43,7.56,3.25,11.33,4.91,4,1.78,8.3,3.18,12,5.53,5.45,3.5,11,7,15.53,11.76a39.52,39.52,0,0,1,6.66,8.85c1.77,3.41,3.35,6.95,3.33,10.88a6.48,6.48,0,0,0,2.37,5.13c1.24,1.14,2.36,2.42,3.5,3.67a2.53,2.53,0,0,1,.7,2.53c-.46,2.31-1.76,4.33-2.15,6.56-.73,4.2-3.63,7.13-6.34,9.64a37.08,37.08,0,0,1-7.85,5.66,63.44,63.44,0,0,1-17.17,5.77,93.58,93.58,0,0,1-9.48,1.33c-3.16.31-6.29.87-9.48.89-9.31.05-18.61.2-27.91.1-3,0-4.61,2-6.74,3.43,17.56,1.12,35,2.63,52.38,4.48,12.47,1.32,48.87,7.51,51.78,9.27-6.59,0-13.09.41-19.6.78-3.67.21-7.34.78-11.06.51s-7.1.87-10.65.78c-2.67-.07-5.23.55-7.89.6s-5.64.61-8.48.77c-4.25.23-8.5.41-12.75.67-6.06.36-12.07,1.2-18.11,1.76-2.73.26-5.49.49-8.23.68-4.36.31-8.7.79-13.05,1.12-4,.3-8.1.22-12.09.8-4.17.6-8.37.92-12.54,1.19-4.56.28-9.09.91-13.68.95-5.64.05-11.22,1.11-16.83,1.57-3.31.27-6.66.5-10,.57-6.28.12-12.51,1.07-18.77,1.65-4.09.37-8.22.3-12.32.55-2.29.14-4.57.72-6.85.73a86.06,86.06,0,0,0-9.13.56c-3.1.36-6.21.26-9.31.61a69.81,69.81,0,0,1-10.84.55c-3.21-.14-6.42.68-9.6.73-4.12.06-8.21.52-12.34.55-7.72.05-15.43.91-23.14,1.15-8.23.26-16.47.48-24.7.76-16.42.56-32.84.79-49.25.89-16.06.11-32.13-.34-48.19-.72-5.73-.14-11.45-1-17.18-1.17s-11.2-.64-16.77-1.12c-12.81-1.1-25.6-2.41-38.32-4.39-10.93-1.69-21.82-3.51-32.54-6.21-7.05-1.78-14.09-3.58-21-6.06a173.71,173.71,0,0,1-24-10.45A82.73,82.73,0,0,1,76.05,335,50.88,50.88,0,0,1,65,319.8a10.93,10.93,0,0,1-1.5-4.55,37.31,37.31,0,0,0,6.12,3.18c2,.74,4,1.7,6,2.55,3.24,1.41,6.56,2.6,9.88,3.76,2.62.93,5.21,2.15,8.1,2.12.44,0,1,.28,1.13-.51.19-1.47-1.63-4.53-3.08-5.16-4.2-1.83-8.41-3.64-12.6-5.47-6.38-2.79-12.74-5.61-19.13-8.36-3.2-1.38-6.54-2.57-9.57-4.2-4.19-2.25-8.56-4.14-12.68-6.56-5.29-3.09-10.65-6-15.66-9.6-7.74-5.48-14.83-11.56-19.15-20.25A26.62,26.62,0,0,1,.51,249.54c1.48-7.91,5.81-14.42,10.62-20.47a46.71,46.71,0,0,1,7.11-7.24c2.06-1.66,3.91-3.62,6-5.28Zm87.35,112.75c.09,1.51,1.19,2.47,2,3.56a33.47,33.47,0,0,0,58-32.08,3.23,3.23,0,0,0-1.42-2.13,37.51,37.51,0,0,1,1.52,14c-1.41,17.4-17.84,31.35-35.25,30a33.17,33.17,0,0,1-24.29-12.79,3.3,3.3,0,0,0-.61-.51c-.06-.28-.06-.64-.5-.34a1.05,1.05,0,0,0-.28-1c-.27-.18-.54-.36-.51-.74l0-.09v.06c.4.07.42.45.58.72l.27,1C111.7,329.62,111.69,330,112.08,329.76ZM501.8,326l0,.09c8.67,10.58,19.84,15.07,33.21,12.34,13.56-2.76,22.28-11.35,25.81-24.74,2.47-9.4.75-18.31-4.59-26.47-.22-.33-.33-.79-.86-.87-.53.68.13,1.18.35,1.67,9.18,20.33-2.46,43-24.33,47.08-10.39,1.92-19.68-.81-27.76-7.61-.58-.49-1-1.23-1.81-1.36Zm-13.91,11.83C466.78,331,445.07,327.43,423,325.94c-25.81-1.74-51.57-.78-77.33,1.2-22.92,1.76-45.75,4.35-68.6,6.76-26,2.73-52,5.29-78.2,6a45.82,45.82,0,0,0-7.38.48c4.79.21,9.58.44,14.37.62,37.79,1.45,75.58,1.27,113.38.93q33.21-.28,66.42-.83c27.15-.43,54.29-.49,81.45-.45,9,0,18,.18,27.07.27.24,0,.49,0,.74,0C492.73,339.22,490.28,338.57,487.89,337.79ZM170.25,297.38c-.25.64.15,1,.54,1.62A1.94,1.94,0,0,0,170.25,297.38Z"/><path class="cls-1" d="M439.75,205.48a96.72,96.72,0,0,1-1.27,17.26c-.28,1.76.68,1.95,1.87,2,3.67.06,7.3.59,10.94.88,7.59.59,15.16,1.33,22.71,2.28,1.39.17,2.05-.16,2.16-1.7a14.29,14.29,0,0,1,1.06-5.56c1.48-2.9,4.16-3.76,7.15-4.16,6.2-.83,12.39-1.79,18.6-2.57,1.67-.22,1.42-1.26,1.39-2.28q-.35-11.85-.72-23.68c-.05-1.62-.21-3.25-.13-4.86s-.66-2.11-2.23-2.22q-10.11-.71-20.22-1.63a6.74,6.74,0,0,1-6.09-5.8c-1-5.76-2.28-11.45-3.81-17.1-1.12-4.12.12-6.86,3.85-9,5.63-3.25,11.24-6.52,16.87-9.76,1-.55,1.43-1.07.88-2.31-4-8.93-7.88-17.88-11.79-26.84a1.7,1.7,0,0,0-2.46-1.08c-6.43,2.07-12.88,4.07-19.32,6.11a6.46,6.46,0,0,1-7.76-2.58c-4.14-6.19-8.3-12.36-13-18.16a6.88,6.88,0,0,1,.28-8.44c4-5.34,8-10.71,12-16,.88-1.16.92-1.83-.28-2.93-7-6.48-13.95-13.07-20.88-19.65-.87-.82-1.58-1.19-2.64-.24-4.89,4.38-10.27,8.22-14.78,13-1.88,2-6.28,2.6-9,.89-5.33-3.39-10.53-7-16.06-10.06a19.47,19.47,0,0,1-3.93-2.43,6.45,6.45,0,0,1-2.09-6.5c1.57-6.72,3.16-13.43,4.87-20.12.33-1.32.1-1.81-1.14-2.26q-13.89-5.06-27.74-10.23c-1.5-.57-1.7.45-2.11,1.27q-4.27,8.46-8.48,16.94c-2.15,4.35-4.85,5.68-9.62,4.57-5.56-1.3-11.25-1.84-16.87-2.79-3.51-.6-5.46-2.36-6.08-6-.79-4.64-1.38-9.33-2-14-.31-2.16-.68-4.31-.87-6.48C310.87-.28,309.85,0,309,0q-9.19.22-18.39.51c-3.45.1-6.9.34-10.35.29-1.76,0-2.13.77-2.24,2.25q-.63,8.85-1.39,17.69a14.15,14.15,0,0,1-.72,4.34,7,7,0,0,1-5.39,4.24,161.08,161.08,0,0,0-17.47,4,6.73,6.73,0,0,1-8-3.12q-5.21-8.67-10.2-17.46c-.77-1.35-1.47-1.62-2.84-1-8.59,3.83-17.18,7.68-25.84,11.37-1.81.77-2.05,1.63-1.5,3.34q3,9.43,5.89,18.94A6.4,6.4,0,0,1,207.9,53c-6.05,4.09-12.08,8.2-17.86,12.67-3.06,2.36-5.94,2.11-9.25-.37-5.06-3.79-10.14-7.56-15.13-11.44-1.25-1-2.1-1.06-3.19.11-6.67,7.14-13.34,14.27-20.08,21.35-1,1.06-.28,1.6.27,2.26q6.47,7.63,13,15.24c2.57,3,2.64,6.23.36,9.43a152.84,152.84,0,0,0-10.15,16.22c-2.43,4.53-5.11,5.84-10,4.64-5.94-1.45-11.88-2.88-17.78-4.49-1.81-.5-2.65.09-3.21,1.64-3.2,8.86-6.36,17.73-9.66,26.55-.57,1.52-.2,2.13,1.1,2.77,6,3,12,5.94,17.88,9,3.15,1.61,4.56,4.31,3.82,7.67-1.23,5.65-2,11.36-2.83,17.08-.73,5.07-2.71,6.86-7.8,7.55-6.07.82-12.13,1.75-18.21,2.51-1.58.19-2,.86-1.94,2.31.22,6.27.41,12.55.53,18.82,0,1.84.77,2.33,2.47,2,5.71-1.26,11.45-2.37,17.13-3.71,11.29-2.66,22.55-5.44,33.82-8.17,2.87-.69,5.75-1.41,8.64-2a2.21,2.21,0,0,0,2.08-2.52,128,128,0,0,1,3.49-28,137.71,137.71,0,0,1,18.22-43.07,139.6,139.6,0,0,1,29.35-33.06,136.1,136.1,0,0,1,43.44-24,138.52,138.52,0,0,1,60-6.34,135.81,135.81,0,0,1,64.71,24.67,137.51,137.51,0,0,1,47.51,58.58C436.15,166.28,439.89,184.64,439.75,205.48Z"/><path class="cls-1" d="M252.56,166.54c1.6.57,2.21-.77,3.08-2.21a52,52,0,0,1,12.63-14.53,2.18,2.18,0,0,0,.87-2.85q-7.53-23.07-15-46.15c-1.36-4.21-2.79-8.41-4.07-12.64-.42-1.37-.94-1.17-2-.67a111.54,111.54,0,0,0-28.53,20.38,115.94,115.94,0,0,0-23.34,32.54,111.59,111.59,0,0,0-6.82,17.91c-.31,1.05-.06,1.32,1,1.43,4.55.48,9.09,1.06,13.64,1.56q18.67,2,37.37,4.05C245,165.75,248.58,166.12,252.56,166.54Z"/><path class="cls-1" d="M301.66,75a118.79,118.79,0,0,0-28.37,3.23c-1.81.43-1.7,1.2-1.13,2.49Q283,105,293.79,129.37c1.17,2.63,2.39,5.25,3.42,7.93.37,1,.78,1.3,1.78,1.29a51.63,51.63,0,0,1,20.79,3.91c1.55.65,2.18-.44,3-1.3,4.42-4.88,8.82-9.79,13.23-14.68q13.82-15.33,27.67-30.63c1.3-1.43.21-1.9-.74-2.51a118.85,118.85,0,0,0-18.8-9.85,112.94,112.94,0,0,0-27.2-7.41C311.4,75.32,305.85,74.66,301.66,75Z"/><path class="cls-1" d="M415.79,191.58A119.29,119.29,0,0,0,406,144.2a121.16,121.16,0,0,0-22.25-33.7c-1.45-1.57-1.89-.14-2.48.65-5.37,7.29-10.69,14.61-16,21.92Q355.13,146.9,345,160.73a2.48,2.48,0,0,0-.2,3.19,48.29,48.29,0,0,1,6.83,19.72c.11.9.61,1.15,1.36,1.31q16.62,3.5,33.23,7c8.66,1.85,17.31,3.74,26,5.61,3.42.74,3.43.74,3.62-2.81C415.83,193.7,415.79,192.64,415.79,191.58Z"/><path class="cls-2" d="M28.05,214.06c.3-.25.74-.41.67-.9,0-.08-.35-.17-.51-.15-.48.06-.35.48-.41.78A3.2,3.2,0,0,1,28.05,214.06Z"/><path class="cls-2" d="M26.77,214.38c-.3.34-1.17.51-.64,1.1.27.29.72-.33.94-.72Z"/><path class="cls-2" d="M474.37,161.38l-.56.08c.06.06.11.18.17.18s.38,0,.35-.3Z"/><path class="cls-2" d="M112.11,166.88l.67-.14c0-.09-.1-.24-.15-.25a.49.49,0,0,0-.58.36Z"/><path class="cls-2" d="M111.42,167l-.83.44.41.45.73-.55Z"/><path class="cls-2" d="M111.73,167.37c.22-.09.56-.09.37-.49l0,0-.63.18C111.52,167.15,111.63,167.26,111.73,167.37Z"/><path class="cls-2" d="M29.56,212.59l.38-.27c-.22-.24-.43-.11-.63,0Z"/><path class="cls-2" d="M29.31,212.35c-.15.17-.47.31-.11.56,0,0,.23-.2.36-.32Z"/><path class="cls-2" d="M25.51,216.27c.25-.2.59-.42.23-.75s-.45.06-.58.29Z"/><polygon class="cls-2" points="589.17 289.46 589.3 289.5 589.28 289.36 589.17 289.46"/><path class="cls-2" d="M24.73,217l.46-.43-.51-.41-.44.38Z"/><path class="cls-2" d="M25.19,216.58l.32-.31-.35-.46-.48.36Z"/><path class="cls-2" d="M27.07,214.76l.49-.36-.32-.32-.47.3Z"/><path class="cls-2" d="M27.56,214.4l.49-.35-.25-.26-.56.29Z"/><path class="cls-3" d="M170.79,299a1.94,1.94,0,0,0-.54-1.62C170,298,170.4,298.42,170.79,299Z"/><path class="cls-3" d="M110.73,327.67c.4.08.42.46.58.73l0,.05c-.27-.18-.54-.36-.51-.74Z"/><path class="cls-3" d="M111.31,328.4l.27,1,0,.05a1.06,1.06,0,0,0-.28-1Z"/><polygon class="cls-3" points="501.8 326.09 501.8 325.96 501.78 326.05 501.8 326.09"/><polygon class="cls-3" points="110.76 327.7 110.74 327.62 110.73 327.68 110.76 327.7"/><path class="cls-3" d="M112.05,329.81c-.06-.28-.06-.64-.5-.33l0-.05c.12.19.11.56.5.33Z"/><path class="cls-1" d="M555.58,233.8q-16-7-25.23-19.2A50.58,50.58,0,0,1,520,187.27h47.37a18.21,18.21,0,0,0,7.57,13.17q6.74,5.06,16.54,5.05,9,0,13.87-3.5a10.75,10.75,0,0,0,4.91-9.11q0-6.74-7-10t-22.7-7.14a213.07,213.07,0,0,1-28-8.27,48.28,48.28,0,0,1-19.34-13.74Q525,144.38,525,128.41a43,43,0,0,1,7.43-24.53q7.41-11.07,21.86-17.52t34.34-6.45q29.43,0,46.39,14.58t19.48,38.68H610.24a19.09,19.09,0,0,0-7.15-12.89q-6-4.77-15.84-4.77-8.4,0-12.89,3.23a10.28,10.28,0,0,0-4.48,8.82q0,6.74,7.14,10.1t22.29,6.72a245.55,245.55,0,0,1,28.31,8.83,48.89,48.89,0,0,1,19.2,14q8.26,9.66,8.55,25.92a41.14,41.14,0,0,1-7.71,24.53q-7.71,10.8-22.14,17T592,240.81Q571.56,240.81,555.58,233.8Z"/><path class="cls-1" d="M688.3,58.47a24.08,24.08,0,0,1-8-18.36,24.42,24.42,0,0,1,8-18.64q8-7.42,20.6-7.43,12.35,0,20.33,7.43a24.41,24.41,0,0,1,8,18.64,24.08,24.08,0,0,1-8,18.36q-8,7.43-20.33,7.43Q696.3,65.9,688.3,58.47Zm44.43,23.69v156.4H684.8V82.16Z"/><path class="cls-1" d="M1013.45,98.13q17.23,17.67,17.24,49.06v91.37H983V153.63q0-15.13-8-23.4T953,122q-14,0-22,8.27t-8,23.4v84.93H875.4V153.63q0-15.13-8-23.4t-22-8.27q-14,0-22,8.27t-8,23.4v84.93H767.49V82.16h47.93v19.62a51.23,51.23,0,0,1,19.06-15.56,59.93,59.93,0,0,1,26.63-5.75q17.65,0,31.53,7.57a54.24,54.24,0,0,1,21.72,21.59,63.05,63.05,0,0,1,22.15-21,59.89,59.89,0,0,1,30.55-8.13Q996.21,80.47,1013.45,98.13Z"/><path class="cls-1" d="M1063.9,117.75q9.11-18.21,24.81-28a64.83,64.83,0,0,1,35-9.81q16.53,0,29,6.73A49.65,49.65,0,0,1,1172,104.3V82.16h47.93v156.4H1172V216.42a51.89,51.89,0,0,1-19.48,17.66q-12.48,6.72-29,6.73a63.62,63.62,0,0,1-34.76-9.95q-15.7-10-24.81-28.31t-9.11-42.47Q1054.79,136,1063.9,117.75Zm98.11,14.3a33.7,33.7,0,0,0-48.5-.14q-9.94,10.23-10,28.17t10,28.45a33.38,33.38,0,0,0,48.5.14q9.95-10.36,10-28.31T1162,132.05Z"/></svg>
+                </div>
+                <!--End Logo-->
+                
+                <!-- Navbar Modules-->
+                <nav class="py-10 custom-scrollbar">
+                    
+                    <!-- Dashboard Link -->
+                    <a asp-area="" asp-page="/Index" class="flex items-center text-zinc-700 px-6 py-3 cursor-pointer hover:text-white hover:bg-orange-600 ease-in duration-300 "><svg class=" w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"></path></svg>
+                        <span class="ml-3">
+                        Dashboard
+                        </span>
+                    </a>
+                    <!-- End Dashboard Link -->
+                    
+                    <p class="text-sm font-semibold text-orange-600 mt-10 mb-2 px-6 uppercase">Módulos</p>
+
+                    <!-- Customers Module-->
+                    <div  x-data="{ linkActive: false }">
+                        
+                        <div :class=" linkActive ? 'bg-orange-600 text-white' : ''" @@click= "linkActive = !linkActive" class="flex items-center justify-between text-zinc-700 hover:text-white hover:bg-orange-600 px-6 py-3 cursor-pointer ease-in transition duration-150">
+
+                            <!-- Customers Module Link-->
+                            <div class="flex items-center">
+                                <svg :class="linkActive ? 'text-white' : ' ' " class=" w-5 h-5 fill-current hover:fill-current transition duration-150 ease-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>
+                                <span class="color-current ml-3 transition duration-150 ease-in-out">Clientes</span>
+                            </div>
+                            <!-- End Customers Module Link-->
+                                
+                            <svg class="w-5 h-5 transition duration-150 fill-current" :class="linkActive ? 'rotate-90' : ' ' " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                            </svg>
+                        </div>
+
+                        <!--Customers Submenu -->
+                        <ul x-show="linkActive" x-cloak x-collapse.duration.300ms class="text-gray-700 shadow-md">
+                                
+                            <li class="pl-10 pr-6 py-2 cursor-pointer hover:bg-orange-600 opacity-70 text-current ease-in transition duration-150 hover:text-white">
+                                <a asp-area="" asp-page="/Customers/Index" class="flex items-center">
+                                    <span class="mr-2 text-sm current-color "><svg class="fill-current w-5 h-5"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 22h12c.178 0 .348-.03.512-.074l-3.759-3.759A4.966 4.966 0 0 1 12 19c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5a4.964 4.964 0 0 1-.833 2.753l3.759 3.759c.044-.164.074-.334.074-.512V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><circle cx="12" cy="14" r="3"></circle></svg></span>
+                                    <span class="overflow-ellipsis inline-block">Gestión de clientes</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--End Customers Submenu -->
+                    </div>
+                    <!-- End Customers Module-->
+                    
+                    <!-- Employees Module-->
+                    <div  x-data="{ linkActive: false }">
+                        
+                        <div :class=" linkActive ? 'bg-orange-600 text-white' : ''" @@click= "linkActive = !linkActive" class="flex items-center justify-between text-zinc-700 hover:text-white hover:bg-orange-600 px-6 py-3 cursor-pointer ease-in transition duration-150">
+
+                            <!-- Employees Module Link-->
+                            <div class="flex items-center">
+                                <svg :class="linkActive ? 'text-white' : ' ' " class=" w-5 h-5 fill-current hover:fill-current transition duration-150 ease-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 12c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm1.5 1H8c-3.309 0-6 2.691-6 6v1h15v-1c0-3.309-2.691-6-6-6z"></path><path d="M16.604 11.048a5.67 5.67 0 0 0 .751-3.44c-.179-1.784-1.175-3.361-2.803-4.44l-1.105 1.666c1.119.742 1.8 1.799 1.918 2.974a3.693 3.693 0 0 1-1.072 2.986l-1.192 1.192 1.618.475C18.951 13.701 19 17.957 19 18h2c0-1.789-.956-5.285-4.396-6.952z"></path></svg>
+                                <span class="color-current ml-3 transition duration-150 ease-in-out">Colaboradores</span>
+                            </div>
+                            <!-- End Employees Module Link-->
+                                
+                            <svg class="w-5 h-5 transition duration-150 fill-current" :class="linkActive ? 'rotate-90 text-white' : ' ' " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                            </svg>
+                        </div>
+
+                        <!--Employees Submenu -->
+                        <ul x-show="linkActive" x-cloak x-collapse.duration.300ms class="text-gray-700 shadow-md">
+                                
+                            <li class="pl-10 pr-6 py-2 cursor-pointer hover:bg-orange-600 opacity-70 text-current ease-in transition duration-150 hover:text-white">
+                                <a asp-area="" asp-page="/Employees/Index" class="flex items-center">
+                                    <span class="mr-2 text-sm current-color "><svg class="fill-current w-5 h-5"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 22h12c.178 0 .348-.03.512-.074l-3.759-3.759A4.966 4.966 0 0 1 12 19c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5a4.964 4.964 0 0 1-.833 2.753l3.759 3.759c.044-.164.074-.334.074-.512V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><circle cx="12" cy="14" r="3"></circle></svg></span>
+                                        <span class="overflow-ellipsis inline-block">Gestión de empleados</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--End Customers Submenu -->
+                    </div>
+                    <!-- End Employees Module-->
+
+                    <!-- Spare Parts Module-->
+                    <div  x-data="{ linkActive: false }">
+                        
+                        <div :class=" linkActive ? 'bg-orange-600 text-white' : ''" @@click= "linkActive = !linkActive" class="flex items-center justify-between text-zinc-700 hover:text-white hover:bg-orange-600 px-6 py-3 cursor-pointer ease-in transition duration-150">
+
+                            <!-- Spare Parts Module Link-->
+                            <div class="flex items-center">
+                                <svg :class="linkActive ? 'text-white' : ' ' " class=" w-5 h-5 fill-current hover:fill-current transition duration-150 ease-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.999 8a.997.997 0 0 0-.143-.515L19.147 2.97A2.01 2.01 0 0 0 17.433 2H6.565c-.698 0-1.355.372-1.714.971L2.142 7.485A.997.997 0 0 0 1.999 8c0 1.005.386 1.914 1 2.618V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-9.382c.614-.704 1-1.613 1-2.618zm-2.016.251A2.002 2.002 0 0 1 17.999 10c-1.103 0-2-.897-2-2 0-.068-.025-.128-.039-.192l.02-.004L15.219 4h2.214l2.55 4.251zm-9.977-.186L10.818 4h2.361l.813 4.065C13.957 9.138 13.079 10 11.999 10s-1.958-.862-1.993-1.935zM6.565 4h2.214l-.76 3.804.02.004c-.015.064-.04.124-.04.192 0 1.103-.897 2-2 2a2.002 2.002 0 0 1-1.984-1.749L6.565 4zm3.434 12h-4v-3h4v3z"></path></svg>
+                                <span class="color-current ml-3 transition duration-150 ease-in-out">Repuestos</span>
+                            </div>
+                            <!-- End Spare Parts Module Link-->
+                                
+                            <svg class="w-5 h-5 transition duration-150 fill-current" :class="linkActive ? 'rotate-90 text-white' : ' ' " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                            </svg>
+                        </div>
+
+                        <!--Spare Parts Submenu -->
+                        <ul x-show="linkActive" x-cloak x-collapse.duration.300ms class="text-gray-700 shadow-md">
+                                
+                            <li class="pl-10 pr-6 py-2 cursor-pointer hover:bg-orange-600 opacity-70 text-current ease-in transition duration-150 hover:text-white">
+                                <a asp-area="" asp-page="/SpareParts/Index" class="flex items-center">
+                                    <span class="mr-2 text-sm current-color "><svg class="fill-current w-5 h-5"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 22h12c.178 0 .348-.03.512-.074l-3.759-3.759A4.966 4.966 0 0 1 12 19c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5a4.964 4.964 0 0 1-.833 2.753l3.759 3.759c.044-.164.074-.334.074-.512V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><circle cx="12" cy="14" r="3"></circle></svg></span>
+                                        <span class="overflow-ellipsis inline-block">Gestión de repuestos</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--End Customers Submenu -->
+                    </div>
+                    <!-- End Spare Parts Module-->
+
+                    <!--Services Module-->
+                    <a asp-area="" asp-page="/Services/Index" class="flex items-center text-gray-700 px-6 py-3 cursor-pointer hover:bg-orange-600  hover:text-white transition duration-150 ease-in"
+                    >
+                        <svg :class="linkActive ? 'text-white' : ' ' " class=" w-5 h-5 fill-current hover:fill-current transition duration-150 ease-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20.772 13.155-1.368-4.104A2.995 2.995 0 0 0 16.559 7H7.441a2.995 2.995 0 0 0-2.845 2.051l-1.368 4.104A2.001 2.001 0 0 0 2 15v3c0 .738.404 1.376 1 1.723V21a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.277A1.99 1.99 0 0 0 22 18v-3c0-.831-.507-1.542-1.228-1.845zM7.441 9h9.117a1 1 0 0 1 .949.684L18.613 13H5.387l1.105-3.316c.137-.409.519-.684.949-.684zM5.5 18a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 5.5 18zm13 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 18.5 18zM5.277 5c.347.595.985 1 1.723 1s1.376-.405 1.723-1h6.555c.346.595.984 1 1.722 1s1.376-.405 1.723-1H17V3h1.723c-.347-.595-.985-1-1.723-1s-1.376.405-1.723 1H8.723C8.376 2.405 7.738 2 7 2s-1.376.405-1.723 1H7v2H5.277z"></path></svg>
+                        <span class="color-current ml-3 transition duration-150 ease-in">
+                            Servicios
+                        </span>
+                    </a>
+
+                    <!-- End Services Module-->
+
+                    <!--Branch Module-->
+                    <a asp-area="" asp-page="/Branch/Index" class="flex items-center text-gray-700 px-6 py-3 cursor-pointer hover:bg-orange-600  hover:text-white transition duration-150 ease-in"
+                    >
+                        <svg class="w-5 h-5 fill-current ease-in" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M21 7h-6a1 1 0 0 0-1 1v3h-2V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM8 6h2v2H8V6zM6 16H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V6h2v2zm4 8H8v-2h2v2zm0-4H8v-2h2v2zm9 4h-2v-2h2v2zm0-4h-2v-2h2v2z"></path></svg>
+                        <span class="color-current ml-3 transition duration-150 ease-in">
+                            Sucursales
+                        </span>
+                    </a>
+                    <!--End Branch Link -->
+
+                    <!--Cars Link -->
+                    <a asp-area="" asp-page="/Cars/Index" class="flex items-center text-gray-700 px-6 py-3 cursor-pointer hover:bg-orange-600  hover:text-white transition duration-150 ease-in-out"
+                    >
+                        <svg class="flex w-5 h-5 fill-current ease-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20.772 10.155-1.368-4.104A2.995 2.995 0 0 0 16.559 4H7.441a2.995 2.995 0 0 0-2.845 2.051l-1.368 4.104A2 2 0 0 0 2 12v5c0 .738.404 1.376 1 1.723V21a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2h12v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2.277A1.99 1.99 0 0 0 22 17v-5a2 2 0 0 0-1.228-1.845zM7.441 6h9.117c.431 0 .813.274.949.684L18.613 10H5.387l1.105-3.316A1 1 0 0 1 7.441 6zM5.5 16a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 5.5 16zm13 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 18.5 16z"></path></svg>
+                        <span class="color-current ml-3 transition duration-150 ease-in">
+                            Vehículos
+                        </span>
+                    </a>
+                    <!--End Cars Link -->
+                </nav>
+                <!-- Navbar Modules-->
+            </aside>
+            <!--End Sidebar-->
+
+            <!--Main Container-->
+            <div class="lg:pl-64 w-full flex flex-col">
+
+                <!--Topbar-->
+                <div class="flex flex-col">
+                    <!--Topbar Header-->
+                    <header class="flex justify-between items-center h-16 py-4 px-6 bg-white font-poppins shadow-md">
+                        <!--Mobile Menu Hamburguer -->
+                        <div class="flex items-center">
+                            <button @@click="menuOpen = true" class="text-zinc-700 hover:text-orange-600 focus:outline-none lg:hidden ease-in transition duration-150">
+                                <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+                            </button>
+                        </div>
+                        <!--End Mobile Menu Hamburguer-->
+
+                        <!--Right Top Menu -->
+                        <div class="flex items-center">
+                            <!--Search Input-->
+                            <form class="relative">
+                            <input type="text" placeholder="Buscar..."
+                                class="w-48 lg:w-72 bg-zinc-50 text-sm py-2 pl-4 border border-zinc-400 rounded-lg focus:ring-0 focus:outline-none focus:border-orange-600 ease-in transition duration-150"
+                            >
+                            <button class="absolute right-2 top-2.5">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"></path>
+                                </svg>
+                            </button>
+                            </form>
+                            <!--End Search Input-->
+
+                            <!--Notifications Module-->
+                            <div x-data="{ linkActive: false }" class="relative mx-6">
+
+                                <!--Main Notifications-->
+                                <div @@click="linkActive = !linkActive" class="cursor-pointer flex">
+
+                                    <svg class="w-6 h-6 cursor-pointer fill-zinc-700 hover:fill-orange-600 ease-in transition duration-150" xmlns="http://www.w3.org/2000/svg"><path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-7.414V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v4.586l-1.707 1.707A.996.996 0 0 0 3 17v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a.996.996 0 0 0-.293-.707L19 14.586z"></path>
+                                    </svg>
+                                    <sub>
+                                        <span class="bg-orange-600 text-zinc-100 px-1.5 py-0.5 rounded-full -ml-1 animate-pulse">
+                                            2
+                                        </span>
+                                    </sub>
+                                </div>
+                                <!--End Main Notifications-->
+                                
+                                <!--Notifications Container-->
+                                <div x-show="linkActive" @@click.away="linkActive = false" x-cloak class="absolute right-0 w-96 top-11 border border-zinc-300 z-10">
+                                    <!--Notifications Content-->
+                                    <div class="bg-white rounded max-h-96 overflow-y-scroll custom-scrollbar">
+                                        <!--Notifications Content Header-->
+                                        <div class="flex items-center justify-between px-4 py-2">
+                                            <span class="font-bold">Notificaciones</span>
+                                            <span class="text-xs px-1.5 py-0.5 bg-orange-600 text-zinc-100 rounded">
+                                                2 Sin leer
+                                            </span>
+                                        </div>
+                                        <!--End Notifications Content Header-->
+                                        <hr>
+                                        <!--Notificactions List-->
+                                        <a href="#" class="flex items-center justify-between py-4 px-3 hover:bg-zinc-100 bg-opacity-20">
+                                            <div class="flex items-center">
+                                                <svg class="w-8 h-8 bg-primary bg-opacity-20 px-1.5 py-0.5 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.553 18.895 4 2a1.001 1.001 0 0 0 .894 0L12 19.118l3.553 1.776a.99.99 0 0 0 .894.001l4-2c.339-.17.553-.516.553-.895v-5c0-.379-.214-.725-.553-.895L17 10.382V6c0-.379-.214-.725-.553-.895l-4-2a1 1 0 0 0-.895 0l-4 2C7.214 5.275 7 5.621 7 6v4.382l-3.447 1.724A.998.998 0 0 0 3 13v5c0 .379.214.725.553.895zM8 12.118l2.264 1.132-2.913 1.457-2.264-1.132L8 12.118zm4-2.5 3-1.5v2.264l-3 1.5V9.618zm6.264 3.632-2.882 1.441-2.264-1.132L16 12.118l2.264 1.132zM8 18.882l-.062-.031V16.65L11 15.118v2.264l-3 1.5zm8 0v-2.264l3-1.5v2.264l-3 1.5zM12 5.118l2.264 1.132-2.882 1.441-2.264-1.132L12 5.118z"></path></svg>
+                                                <div class="text-sm ml-3">
+                                                    <p class="text-zinc-600 font-bold"
+                                                    >Orden de servicio</p>
+                                                    <p class="text-xs">Tu orden de servicio #123456 está completa</p>
+                                                </div>
+                                            </div>
+                                            <span class="text-xs font-bold">
+                                                Hace 5 min
+                                            </span>
+                                        </a>
+
+                                        <a href="#" class="flex items-center justify-between py-4 px-3 hover:bg-zinc-100 bg-opacity-20">
+                                            <div class="flex items-center">
+                                                <img src="https://st4.depositphotos.com/7752738/38185/v/380/depositphotos_381852360-stock-illustration-user-profile-or-my-account.jpg?forcejpeg=true" class="w-9 rounded-full">
+                                                <div class="text-sm ml-3">
+                                                    <p class="text-zinc-600 font-bold" :class=" linkHover ? 'text-primary' : ''">Maria Gonzales</p>
+                                                    <p class="text-xs">Ha solicitado un servicio</p>
+                                                </div>
+                                            </div>
+                                            <span class="text-xs font-bold">
+                                                Hace 12 min
+                                            </span>
+                                        </a>
+                                        <!--End Notificactions List-->
+                                    </div>
+                                    <!--End Notifications Content-->
+                                </div>
+                                <!--End Notifications Container-->
+                            </div>
+                            <!--End Notifications Module-->
+
+                            <!--Container Profile-->
+                            <div x-data="{ linkActive: false }" class="relative ">
+                                <!-- Profile Main Options-->
+                                <div @@click="linkActive = !linkActive" class="cursor-pointer text-zinc-700 ">
+                                    <svg class="w-10 fill-current hover:fill-orange-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>
+                                </div>
+                                <!--End Profile Main Options-->
+
+                                <!-- Profile Submenu-->
+                                <div x-show="linkActive" @@click.away="linkActive = false" x-cloak class="absolute right-0 w-40 mt-2 top-11 border border-zinc-300 z-20 ease-in transition duration-200">
+                                    <!--Profile Submenu Content-->
+                                    <div class="bg-white rounded">
+                                        <a href="#" class="flex items-center justify-between py-2 px-3 hover:bg-zinc-100">
+                                            <div class="flex items-center text-zinc-700">
+                                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11h7v2h-7zm1 4h6v2h-6zm-2-8h8v2h-8zM4 19h10v-1c0-2.757-2.243-5-5-5H7c-2.757 0-5 2.243-5 5v1h2zm4-7c1.995 0 3.5-1.505 3.5-3.5S9.995 5 8 5 4.5 6.505 4.5 8.5 6.005 12 8 12z"></path>
+                                                </svg>
+                                                <div class="text-sm ml-3">
+                                                    <p class="text-zinc-700 font-bold capitalize">Perfil</p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" class="flex items-center justify-between py-2 px-3 hover:bg-zinc-100">
+                                            <div class="flex items-center text-zinc-700">
+                                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z"></path>
+                                                </svg>
+                                                <div class="text-sm ml-3">
+                                                    <p class="text-gray-600 font-bold capitalize">Configuración</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--End Profile Submenu Content-->
+                                </div>
+                                <!--End Profile Submenu-->
+                            </div>
+                            <!--Container Profile-->
+                        </div>
+                        <!--End Right Top Menu -->
+                    </header>
+                    <!--End Topbar Header-->
+                </div>
+                <!--End Topbar-->
+
+                <!--Page content -->
+                <div class="h-full bg-zinc-100 p-4">
+                    <main>
+                        @RenderBody()
+                    </main>
+                </div>
+                <!--Page content -->
+            </div>
+            <!--Main Container-->
+        </div>
+        <footer class="text-center lg:text-left shadow-md">
+            <div class="text-zinc-700 text-center p-4">
+                © 2022 Equipo9-G10 Misión-TIC |
+                <a class="text-zinc-800 font-semibold font-poppins hover:text-orange-600 hover:underline ease-in transition duration-200 " href="https://github.com/Equipo9-G10/sima">Repositorio Proyecto</a>
+            </div>
+        </footer>
+    </body>
+</html>

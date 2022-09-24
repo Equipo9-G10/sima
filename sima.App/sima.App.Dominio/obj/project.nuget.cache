@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BEFRwWBiV3oyhDit7CWoUnaWOobwGLRI8AeZ0+fMtlb9dwaNI1tM5Gwdqb1ERmFcvYYk1Gr54hOEmQqFIKYynQ==",
+  "success": true,
+  "projectFilePath": "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "/home/developer/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "S0C0wZBjCQVKhTZxM0ZCkXbM9+545i4XH91ThHSYO32GHDXoOjJf2u1/0EpVuP81IJYywqmd7gcA6xLHEZhJiA==",
+  "success": true,
+  "projectFilePath": "/home/developer/dev/sima/sima.App/sima.App.Persistencia/sima.App.Persistencia.csproj",
+  "expectedPackageFiles": [
+    "/home/developer/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
