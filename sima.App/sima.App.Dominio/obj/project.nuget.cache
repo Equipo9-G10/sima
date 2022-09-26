@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BEFRwWBiV3oyhDit7CWoUnaWOobwGLRI8AeZ0+fMtlb9dwaNI1tM5Gwdqb1ERmFcvYYk1Gr54hOEmQqFIKYynQ==",
+  "dgSpecHash": "FXwGEwT2LTV65Y3368Vl/Q1f7IAAeAz4Fb1EfoqUqD1B7SLMD5NJT3Ci79bdajsFaF+yuiY/qUL8P0vFLp6Fyg==",
   "success": true,
   "projectFilePath": "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj",
   "expectedPackageFiles": [
-    "/home/developer/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+    "/home/developer/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.9/microsoft.aspnetcore.app.ref.6.0.9.nupkg.sha512"
   ],
   "logs": []
 }
