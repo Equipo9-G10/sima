@@ -1,0 +1,17 @@
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/bin/Debug/net6.0/sima.App.Persistencia.deps.json
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/bin/Debug/net6.0/sima.App.Persistencia.runtimeconfig.json
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/bin/Debug/net6.0/sima.App.Persistencia.dll
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/bin/Debug/net6.0/sima.App.Persistencia.pdb
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/bin/Debug/net6.0/sima.App.Dominio.dll
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/bin/Debug/net6.0/sima.App.Dominio.pdb
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.csproj.AssemblyReference.cache
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.AssemblyInfoInputs.cache
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.AssemblyInfo.cs
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.csproj.CoreCompileInputs.cache
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.csproj.CopyComplete
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.dll
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/ref/sima.App.Persistencia.dll
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.pdb
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/sima.App.Persistencia.genruntimeconfig.cache
+/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/Debug/net6.0/refint/sima.App.Persistencia.dll
