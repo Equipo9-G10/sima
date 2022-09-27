@@ -1,0 +1,12 @@
+/home/developer/dev/sima/sima.App/sima.App.Dominio/bin/Debug/net6.0/sima.App.Dominio.deps.json
+/home/developer/dev/sima/sima.App/sima.App.Dominio/bin/Debug/net6.0/sima.App.Dominio.dll
+/home/developer/dev/sima/sima.App/sima.App.Dominio/bin/Debug/net6.0/sima.App.Dominio.pdb
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/sima.App.Dominio.csproj.AssemblyReference.cache
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/sima.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/sima.App.Dominio.AssemblyInfoInputs.cache
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/sima.App.Dominio.AssemblyInfo.cs
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/sima.App.Dominio.csproj.CoreCompileInputs.cache
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/sima.App.Dominio.dll
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/ref/sima.App.Dominio.dll
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/sima.App.Dominio.pdb
+/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/Debug/net6.0/refint/sima.App.Dominio.dll

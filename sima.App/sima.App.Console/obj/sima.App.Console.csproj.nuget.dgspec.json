@@ -1,0 +1,251 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/developer/dev/sima/sima.App/sima.App.Console/sima.App.Console.csproj": {}
+  },
+  "projects": {
+    "/home/developer/dev/sima/sima.App/sima.App.Console/sima.App.Console.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/developer/dev/sima/sima.App/sima.App.Console/sima.App.Console.csproj",
+        "projectName": "sima.App.Console",
+        "projectPath": "/home/developer/dev/sima/sima.App/sima.App.Console/sima.App.Console.csproj",
+        "packagesPath": "/home/developer/.nuget/packages/",
+        "outputPath": "/home/developer/dev/sima/sima.App/sima.App.Console/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/developer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj": {
+                "projectPath": "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj"
+              },
+              "/home/developer/dev/sima/sima.App/sima.App.Persistencia/sima.App.Persistencia.csproj": {
+                "projectPath": "/home/developer/dev/sima/sima.App/sima.App.Persistencia/sima.App.Persistencia.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.9, 6.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.109/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj",
+        "projectName": "sima.App.Dominio",
+        "projectPath": "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj",
+        "packagesPath": "/home/developer/.nuget/packages/",
+        "outputPath": "/home/developer/dev/sima/sima.App/sima.App.Dominio/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/developer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.9, 6.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.109/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/developer/dev/sima/sima.App/sima.App.Persistencia/sima.App.Persistencia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/developer/dev/sima/sima.App/sima.App.Persistencia/sima.App.Persistencia.csproj",
+        "projectName": "sima.App.Persistencia",
+        "projectPath": "/home/developer/dev/sima/sima.App/sima.App.Persistencia/sima.App.Persistencia.csproj",
+        "packagesPath": "/home/developer/.nuget/packages/",
+        "outputPath": "/home/developer/dev/sima/sima.App/sima.App.Persistencia/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/developer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj": {
+                "projectPath": "/home/developer/dev/sima/sima.App/sima.App.Dominio/sima.App.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.7.13.11, )"
+            },
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[3.7.2, )"
+            },
+            "AWSSDK.Lambda": {
+              "target": "Package",
+              "version": "[3.7.14.20, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.9.60, )"
+            },
+            "AWSSDK.SecurityToken": {
+              "target": "Package",
+              "version": "[3.7.1.206, )"
+            },
+            "AWSSDK.SimpleSystemsManagement": {
+              "target": "Package",
+              "version": "[3.7.20.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.9, 6.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.109/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
